@@ -1,0 +1,18 @@
+/**app.wxss**/
+
+@import "/styles/icon";
+.page,
+view,
+text,
+swiper,
+swiper-item,
+rich-text,navigator {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+page {
+    --zhuticolor: #eb4450;
+    font-size: 28rpx
+}

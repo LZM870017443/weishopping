@@ -15,24 +15,44 @@ Page({
         flootlist: []
 
     },
+    // 获取轮播图
+    async getswiperlist() {
+        const swiperlist = await getswiperlist();
+        this.setData({ swiperlist })
+    },
+    // 获取导航栏图
+    async getcategorylist() {
+        const categorylist = await getategorylist();
+        this.setData({ categorylist })
+    },
+    async getflootlist() {
+        const flootlist = await getflootlist();
+        this.setData({ flootlist })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        // 获取轮播图
-        const swiperlists = getswiperlist();
-        // console.log(swiperlists)
-        var swiperlist = Promise.resolve(swiperlists);
-        swiperlist.then((result) => { this.setData({ swiperlist: result.data.message }) });
-        // 获取导航栏图
-        const categorylists = getategorylist();
-        var categorylist = Promise.resolve((categorylists));
-        categorylist.then((result) => { this.setData({ categorylist: result.data.message }) });
-        // 获取楼层数据
-        const flootlists = getflootlist();
-        var flootlist = Promise.resolve((flootlists));
-        // console.log(flootlist)
-        flootlist.then((result) => { this.setData({ flootlist: result.data.message }) });
+        this.getswiperlist();
+        this.getcategorylist();
+        this.getflootlist()
+            // 获取轮播图
+            // const swiperlists = getswiperlist();
+            // // console.log(swiperlists)
+            // var swiperlist = Promise.resolve(swiperlists);
+            // swiperlist.then((result) => { this.setData({ swiperlist: result }) });
+            // 获取导航栏图
+            // const categorylists = getategorylist();
+            // var categorylist = Promise.resolve((categorylists));
+            // categorylist.then((result) => { this.setData({ categorylist: result }) });
+            // 获取楼层数据
+            // const flootlists = getflootlist();
+            // var flootlist = Promise.resolve((flootlists));
+            // // console.log(flootlist)
+            // flootlist.then((result) => { this.setData({ flootlist: result }) });
+
+
+
         // var reqTask = wx.request({
         //     url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
         //     data: {},

@@ -3,32 +3,19 @@
 <!-- 搜索框 -->
 <navigator class="" target="" url="../search/search" hover-class="navigator-hover" open-type="navigate">
     <search></search>
-</navigator>
-<!-- <swiper class="swiper" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" autoplay="true" interval="2000" duration="1000"  >
-    <swiper-item class="" item-id="">
-        <image class="" src="http://photogz.photo.store.qq.com/psc?/V14E7xjO3iJWV4/TmEUgtj9EK6.7V8ajmQrEFAGsOWTRPbGT8wKAxxi6Zym4epvVDfUObSYdNCU3UsIPfSWTmKeomfOiGTEibBbiuAmB.bC2g.k1353sdiYHzA!/b&bo=VQhABkAOsAoBKeE!&rf=viewer_4.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
-          
-    </swiper-item>
-      <swiper-item class="" item-id="">
-          <image class="" src="http://photogz.photo.store.qq.com/psc?/V14E7xjO3iJWV4/TmEUgtj9EK6.7V8ajmQrEGkcXkgnUu9zaul*i*1GW242H2CA*1QCfkZJX11bN76D1j1stTtx68VcNxciOv0ZJpmBtXgBWe7i8cg1p26PJUY!/b&bo=VQhABkAOsAoBOfE!&rf=viewer_4.jpg" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
-            
-      </swiper-item>
-        
-</swiper> -->
-  
-  
+</navigator>  
 <!-- 轮播图 -->
 <swiper class="swiper" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" autoplay="true" interval="2000" duration="1000"  >
     <swiper-item class="swiperitem" item-id="" wx:for="{{swiperlist}}" wx:for-index="goods_id" wx:for-item="swiperimg" wx:key="goods_id">
-        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <navigator url="/pages/goods_detail/index?goods_id={{swiperimg.goods_id}}">
             <image class="swiperimg" src="{{swiperimg.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload=""/>
         </navigator>
     </swiper-item>
 </swiper>
 <!-- 导航栏 -->
 <view class="index_cate">
-    <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate" wx:for="{{categorylist}}" wx:key="name">
-        <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+    <navigator  url="/pages/category/category"  open-type="switchTab" wx:for="{{categorylist}}" wx:key="name">
+        <image  src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
     </navigator>
 </view>
 <!-- 楼层 -->
@@ -45,8 +32,6 @@
         <!-- 内容 -->
           <view class="foolt_list">
            <navigator 
-           target="" 
-           url="" 
            hover-class="navigator-hover" 
            open-type="navigate"  
            wx:for="{{foolt.product_list}}"

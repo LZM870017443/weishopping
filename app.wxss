@@ -6,7 +6,8 @@ view,
 text,
 swiper,
 swiper-item,
-rich-text,navigator {
+rich-text,
+navigator {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,4 +16,8 @@ rich-text,navigator {
 page {
     --zhuticolor: #eb4450;
     font-size: 28rpx
+}
+
+image {
+    width: 100%;
 }

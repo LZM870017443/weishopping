@@ -1,16 +1,38 @@
+let ajaxnum = 0;
 export const request = (params) => {
+    ajaxnum++
+    let header = {...params.header };
+    if (params.url.includes("/my/")) {
+        // 拼接header 带上token
+        header["Authorization"] = wx.getStorageSync("token");
+    }
+
+    wx.showLoading({
+        title: "正在加载中",
+        mask: true,
+    });
+
     return new Promise((res, rej) => {
+
         wx.request({
             ...params,
-            // url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
-            // data: {},
-            // header: { 'content-type': 'application/json' },
-            // method: 'GET',
-            // dataType: 'json',
-            // responseType: 'text',
-            success: (result) => { res(result) },
-            fail: (err) => { rej(err), console.log("shibai") },
-            complete: () => {},
+            header: header,
+            success: (result) => {
+                res(result.data.message);
+                // console.log(result.data)
+            },
+            fail: (err) => {
+                rej(err), console.log(err);
+                console.log(result.data)
+            },
+            complete: () => {
+                ajaxnum--;
+                if (ajaxnum === 0) {
+                    wx.hideLoading();
+                }
+
+
+            },
 
         });
     });

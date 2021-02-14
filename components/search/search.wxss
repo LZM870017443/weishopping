@@ -1,16 +1,18 @@
 /* components/search/search.wxss */
+
 .search {
-  height: 90rpx;
-  padding: 10px;
-  background-color: var(--zhuticolor);
+    height: 90rpx;
+    padding: 10px;
+    background-color: var(--zhuticolor);
 }
-.search navigator {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rpx;
-  background-color: #fff;
-  border-radius: 20rpx;
-  color: #666666;
+
+.search .navigator {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    color: #666666;
 }

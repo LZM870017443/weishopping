@@ -1,0 +1,90 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "分类",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/category/category",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品列表",
+          "pathName": "pages/goods_list/goods_list",
+          "query": "cid=5",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/goods_detail/index",
+          "query": "goods_id=43986",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/car/car",
+          "query": "cid=5",
+          "scene": null
+        },
+        {
+          "name": "支付页面",
+          "pathName": "pages/pay/pay",
+          "query": "cid=5",
+          "scene": null
+        },
+        {
+          "name": "授权页",
+          "pathName": "pages/aut/aut",
+          "query": "cid=5",
+          "scene": null
+        },
+        {
+          "name": "登入",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "查询订单",
+          "pathName": "pages/orde/orde",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "name": "收藏页",
+          "pathName": "pages/collec/collec",
+          "query": "goods_id=43986",
+          "scene": null
+        },
+        {
+          "name": "搜索页",
+          "pathName": "pages/search/search",
+          "query": "goods_id=43986",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

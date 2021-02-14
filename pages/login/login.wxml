@@ -1,0 +1,6 @@
+<!--pages/logi/logi.wxml-->
+<button class="" size="default" type="default" plain="false" hover-stop-propagation="false" open-type="getUserInfo" bindgetuserinfo="handerUserInfo">
+  登入
+</button>
+  
+  

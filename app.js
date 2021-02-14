@@ -5,7 +5,7 @@ App({
 
     },
     onShow: function(options) {
-
+     
     },
     onHide: function() {
 

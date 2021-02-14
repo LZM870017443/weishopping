@@ -1,2 +1,31 @@
 <!--pages/goods_list/goods_list.wxml-->
-<text>pages/goods_list/goods_list.wxml</text>
+<view class="goods_list">
+    <navigator class="" target="" url="../search/search" hover-class="navigator-hover" open-type="navigate">
+    <search></search>
+</navigator>  
+
+<Tabs tabs="{{tabs}}" bind:tabItemChang="handerTabItemChang"> 
+    <block wx:if="{{tabs[0].isActive}}">
+    <view class="first_tab">
+        <navigator 
+        class="goods_item" 
+        target="" 
+        url="../goods_detail/index?goods_id={{item.goods_id}}" 
+        hover-class="navigator-hover" 
+        open-type="navigate"
+        wx:for="{{goodsLists}}"
+        wx:key="cat_id">
+            <view class="left_goods_list">
+               <image class="" src="{{item.goods_small_logo?item.goods_small_logo:'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.soutu123.com%2Felement_origin_min_pic%2F01%2F37%2F92%2F40573c69065b76e.jpg%21%2Ffw%2F700%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fpic.soutu123.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614447789&t=e0a18b0cfa6b5657fac5d8be4e87df56.jpg'}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+                </view>
+               <view class="rigth_goods_list">
+                <view class="goods_name">{{item.goods_name}}</view>
+                  <view class="goods_price">￥{{item.goods_price}}元</view>
+               </view>  
+        </navigator>    
+    </view>    
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">1</block>
+    <block wx:else="{{tabs[2].isActive}}">2</block>
+</Tabs>
+</view>
